@@ -81,7 +81,7 @@ router.get('/', async (req, res) => {
                     try {
                         const mega_url = await upload(fs.createReadStream(credsPath), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let session_code = "makima~" + string_session;
+                        let session_code = "ARSLAN-MD~" + string_session;
 
                         // Send Makima Session ID to user
                         let sentCode = await sock.sendMessage(sock.user.id, { text: session_code });
